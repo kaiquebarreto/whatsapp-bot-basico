@@ -24,12 +24,16 @@
     
     var listaResposta = function(message, info) {
         
-        if ( message == "@ola") {
+        if ( message.includes('ola')) {
             return `Ola ${info.name}, tudo bem ?`;
         }
+
+        else if ( message == "@site" ) {
+            return 'Fico feliz, quer deseja acessar meu site:\n\nhttps://kaiquebarreto.com';
+        }
         
-        else if ( message == "@time" ) {
-            return `Time ${Date()}`;
+        else if ( message == "@instagram" ) {
+            return 'Opa, meu instagram é: \n\n@kaique_barreto';
         }
 
     }
