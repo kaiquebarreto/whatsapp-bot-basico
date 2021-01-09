@@ -24,17 +24,66 @@
     
     var listaResposta = function(message, info) {
         
-        if ( message.includes('ola')) {
-            return `Ola ${info.name}, tudo bem ?`;
+        const mensagemInicial = `Ola ${info.name}!\nDigite um dos comandos abaixo:\n\n*@Contratar* - Contrate um de meus serviços\n*@Suporte* - Entre em contato com o suporte\n*@Site* - Receba o link do meu site\n*@Instagram* - Siga-me no instagram`;
+
+        if (message == "@ola" || message == "@Ola" || message == "Ola" || message == "ola") {
+            return mensagemInicial;
         }
 
-        else if ( message == "@site" ) {
-            return 'Fico feliz, quer deseja acessar meu site:\n\nhttps://kaiquebarreto.com';
+        else if (message == "@site" || message == "@Site") {
+            return `Fico feliz, quer deseja acessar meu site:\n\nhttps://kaiquebarreto.com`;
+        }
+
+        else if (message == "@contratar" || message == "@Contratar") {
+            return `Fico feliz que tenha interesse em contratar um de meus serviços, por favor, escolha um *NÚMERO* dentre as opções abaixo!\n\n*1.* Criação de Site\n*2.* Criação de Landing Page\n*3.* Criação de Aplicativo\n*4.* Registro de Domínio\n*5.* Email Personalizado\n*6.* Configurar Servidor\n*7.* Otimização de Site\n*8.* Projeto Arquitetônico`;
+        }
+
+
+            else if (message == 1 || message == "01") {
+                return `Certo ${info.name}, você escolheu a Opção 1 - *Criação de Site*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 2 || message == "02") {
+                return `Certo ${info.name}, você escolheu a Opção 2 - *Criação de Landing Page*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 3 || message == "03") {
+                return `Certo ${info.name}, você escolheu a Opção 3 - *Criação de Aplicativo*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 4 || message == "04") {
+                return `Certo ${info.name}, você escolheu a Opção 4 - *Registro de Domínio*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 5 || message == "05") {
+                return `Certo ${info.name}, você escolheu a Opção 5 - *Email Personalizado*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 6 || message == "06") {
+                return `Certo ${info.name}, você escolheu a Opção 6 - *Configurar Servidor*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 7 || message == "07") {
+                return `Certo ${info.name}, você escolheu a Opção 7 - *Otimização de Site*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+            else if (message == 8 || message == "08") {
+                return `Certo ${info.name}, você escolheu a Opção 8 - *Projeto Arquitetônico*\n\nAguarde que em breve entrarei em contato!`;
+            }
+
+
+        else if (message == "@suporte" || message == "@Suporte") {
+            return `Opa, surgiu alguma dúvida ? 
+            Você pode aguardar, que irei te responder por aqui ou utilize um dos canais abaixo:\n\n*Site:* https://kaiquebarreto.com/contato\n*Instagram:* @kaique_barreto\n*Email:* contato@kaiquebarreto.com`;
         }
         
-        else if ( message == "@instagram" ) {
-            return 'Opa, meu instagram é: \n\n@kaique_barreto';
+        else if (message == "@instagram" || message == "@Instagram") {
+            return `Opa, meu instagram é:\n\n@kaique_barreto`;
         }
+
+        else {
+            return mensagemInicial;
+        } 
 
     }
     
