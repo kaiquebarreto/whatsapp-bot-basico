@@ -16,7 +16,7 @@ Esse script foi desenvolvido para criar um simples chatbot para responder mensag
 4. Cole todo o código copiado, e clique na tecla *Enter*;
 5. A partir de agora, o bot ja esta funcionando em tudo que for enviado para ele, será respondido como definido;
 
-##### Comandos Pré Definidos
+#### Comandos Pré Definidos
 
 *@ola*
 *@contratar*
